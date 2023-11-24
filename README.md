@@ -33,13 +33,13 @@ You can run this app on your server using these commands:
 git clone https://github.com/petals-infra/health.petals.dev
 cd health.petals.dev
 pip install -r requirements.txt
-flask run --host=0.0.0.0 --port=5000
+flask run --host=0.0.0.0 --port=46266
 ```
 
 In production, we recommend using gunicorn instead of the Flask dev server:
 
 ```bash
-gunicorn app:app --bind 0.0.0.0:5000 --worker-class gthread --threads 10 --timeout 120
+gunicorn app:app --bind 0.0.0.0:46266 --worker-class gthread --threads 10 --timeout 120
 ```
 
 <details>
@@ -57,14 +57,12 @@ docker-compose up --build -d
 To monitor your private swarm instead of the public one, please replace `PUBLIC_INITIAL_PEERS` with a list of multiaddresses of your swarm's **initial peers** in [config.py](config.py). Example:
 
 ```python
-INITIAL_PEERS = ['/ip4/10.1.2.3/tcp/31234/p2p/QmcXhze98AcgGQDDYna23s4Jho96n8wkwLJv78vxtFNq44']
+INITIAL_PEERS = ['/ip4/49.194.161.134/tcp/31337/p2p/QmNbWmdMF4mrHYBZvaX1aWmEHw1i6Sh7E1sVZdqE1LFbFm']
 ```
 
 ## HTTP API
 
-- **GET /api/v1/state** ([example](https://health.petals.dev/api/v1/state))
-
-    This call returns a large JSON that contains all data used for rendering the [health monitor page](https://health.petals.dev/).
+- **GET /api/v1/state**
 
     Note that we regularly update the info shown there, so the response format may change at any time. We expect most changes to be minor.
     If this is still an issue for you, you can clone this repository and launch your own API endpoint with a fixed version of the code.
