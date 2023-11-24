@@ -17,8 +17,8 @@ MODELS = [
         limited=True,
     ),
     ModelInfo(
-        dht_prefix="Llama-2-70b-chat-hf",
-        repository="https://huggingface.co/meta-llama/Llama-2-70b-chat-hf",
+        dht_prefix="CodeLlama-34b-Instruct-hf",
+        repository="https://huggingface.co/codellama/CodeLlama-34b-Instruct-hf",
         num_blocks=80,
     ),
     ModelInfo(
