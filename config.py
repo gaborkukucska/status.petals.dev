@@ -2,7 +2,7 @@ from petals.constants import PUBLIC_INITIAL_PEERS
 
 from data_structures import ModelInfo
 
-INITIAL_PEERS = PUBLIC_INITIAL_PEERS
+INITIAL_PEERS = /ip4/49.194.161.134/tcp/31337/p2p/QmNbWmdMF4mrHYBZvaX1aWmEHw1i6Sh7E1sVZdqE1LFbFm
 
 MODELS = [
     ModelInfo(
@@ -28,4 +28,4 @@ MODELS = [
     ),
 ]
 
-UPDATE_PERIOD = 60
+UPDATE_PERIOD = 15
