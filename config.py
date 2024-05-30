@@ -2,7 +2,7 @@ from petals.constants import PUBLIC_INITIAL_PEERS
 
 from data_structures import ModelInfo
 
-INITIAL_PEERS = ['/ip4/192.168.0.14/tcp/31337/p2p/QmcTB9tM37HrKWDaCKEDGtbiGYEpN8mqNcBiNnoF929wWM']
+INITIAL_PEERS = ['/dns/ai.gettingitalldone.com/tcp/31337/p2p/QmTbqDrBxCioZMYCjTUHu5GLVERw369VkY7fBTMiKFFDXu']
 
 MODELS = [
     ModelInfo(
